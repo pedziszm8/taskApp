@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
 <head>
     <meta charset="UTF-8">
     <title>Title1</title>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
 </head>
 <body>
-<table style="width:100%">
+<div class="main"  >
+<!--<table style="width:100%">><-->
+    <table >
   <tr>
     <th>Id</th>
     <th>Description</th>
@@ -17,7 +20,7 @@
     <td th:text="${task.status}"> </td>
   </tr>
 
-</table>
+</table></div>
 </p>
 </body>
 </html>
