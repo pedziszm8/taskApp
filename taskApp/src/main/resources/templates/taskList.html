@@ -1,26 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
+<html lang="en" xmlns:="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title1</title>
-    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <link rel="stylesheet" href="/style.css" type="text/css" /><!--<link th:href="@{css/style.css}" rel="stylesheet"/>-->
 </head>
 <body>
-<div class="main"  >
-<!--<table style="width:100%">><-->
+<div class="main">
+<!--<table style="width:100%"
+xmlns:th="http://www.w3.org/1999/xhtml" >><-->
+    <a href="/addNewTask">Dodaj task</a>
+
     <table >
   <tr>
     <th>Id</th>
     <th>Description</th>
     <th>Status</th>
+    <th>Usun</th>
   </tr>
   <tr th:each="task : ${tasks}">
     <td th:text="${task.id}"> </td>
     <td th:text="${task.description}"> </td>
     <td th:text="${task.status}"> </td>
+    <td >
+        <form action="#" th:action="@{/deleteTask/{id}(id=${task.id})}" method="post">
+
+        <button type="submit">Delete</button>
+        </form>
+
+    </td>
+
   </tr>
 
 </table></div>
-</p>
+
 </body>
 </html>
