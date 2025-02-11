@@ -1,5 +1,5 @@
-# Użyj obrazu Maven do budowania aplikacji
-FROM maven:3.8.1-openjdk-11-slim AS build
+# Użyj obrazu Maven do budowania aplikacji z JDK 11
+FROM maven:3.8.6-openjdk-11-slim AS build
 
 # Ustaw katalog roboczy
 WORKDIR /app
@@ -16,7 +16,7 @@ COPY src /app/src
 # Zbuduj aplikację
 RUN mvn clean package -DskipTests
 
-# Użyj obrazu z JDK do uruchomienia aplikacji
+# Użyj obrazu z JDK 11 do uruchomienia aplikacji
 FROM openjdk:11-jdk-slim
 
 # Ustaw katalog roboczy
