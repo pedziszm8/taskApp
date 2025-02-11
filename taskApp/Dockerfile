@@ -17,7 +17,7 @@ COPY src /app/src
 RUN mvn clean package -DskipTests
 
 # Użyj obrazu z JDK do uruchomienia aplikacji
-FROM openjdk:17-jdk-slim
+FROM openjdk:11-jdk-slim
 
 # Ustaw katalog roboczy
 WORKDIR /app
