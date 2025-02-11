@@ -27,7 +27,7 @@ public class SecurityConfiguration {
     @Bean
     public UserDetailsService userDetailsService() {
         UserDetails user = User.withUsername("admin")
-                .password("{noop}mypass")
+                .password("{noopmypass")
                 .roles("USER")
                 .build();
 
