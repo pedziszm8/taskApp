@@ -1,5 +1,5 @@
 # Użyj obrazu Maven do budowania aplikacji
-FROM maven:3.8.6-openjdk-17-slim AS build
+FROM maven:3.8.1-openjdk-11-slim AS build
 
 # Ustaw katalog roboczy
 WORKDIR /app
